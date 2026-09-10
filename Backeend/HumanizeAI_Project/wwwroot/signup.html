@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - HumanizeAI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a href="landing.html">
+    <span aria-hidden="true">H</span>
+    HumanizeAI
+  </a>
+
+  <div role="main">
+
+    <nav aria-label="Authentication options">
+      <a href="login.html">Login</a>
+      <a href="signup.html" aria-current="page">Sign up</a>
+    </nav>
+
+    <div>
+      <h1>Create your account</h1>
+      <p>Free forever. No credit card needed.</p>
+
+      <form action="#" method="POST" novalidate>
+
+        <div>
+          <label for="name">Full name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            autocomplete="name"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            autocomplete="new-password"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="confirm-password">Confirm password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm_password"
+            placeholder="Repeat your password"
+            autocomplete="new-password"
+            required
+          />
+        </div>
+
+        <button type="submit">
+          Create account
+        </button>
+
+        <p>
+          By signing up you agree to our Terms of Service and Privacy Policy.
+        </p>
+
+      </form>
+
+      <p>
+        Already have an account? <a href="login.html">Sign in</a>
+      </p>
+    </div>
+
+  </div>
+
+  <script src="app.js?v=2" defer></script>
+</body>
+</html>

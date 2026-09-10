@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics - HumanizeAI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  
+  <header>
+    <nav aria-label="Application navigation">
+      <a href="dashboard.html">
+        <span aria-hidden="true">H</span>
+        HumanizeAI
+      </a>
+      <ul role="list">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="analytics.html" aria-current="page">Analytics</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+      <div>
+        <div role="img" aria-label="User avatar">HJ</div>
+      </div>
+    </nav>
+  </header>
+
+ 
+  <main>
+
+
+    <div>
+      <h2>Analytics</h2>
+      <p>Your usage stats - linked 1:1 to your account.</p>
+    </div>
+
+    <div role="region" aria-label="Summary statistics">
+
+      <div>
+        <div>Total runs</div>
+        <div>43</div>
+      </div>
+
+      <div>
+        <div>Words humanized</div>
+        <div>18,204</div>
+      </div>
+
+      <div>
+        <div>Avg. AI reduction</div>
+        <div>−59%</div>
+      </div>
+
+    </div>
+    <section aria-labelledby="chart-title">
+      <h3 id="chart-title">Usage over time</h3>
+      <p>Number of humanization runs per day (last 7 days)</p>
+      <div>
+        <canvas id="usage-chart" aria-label="Bar chart showing daily usage over the past 7 days" role="img"></canvas>
+      </div>
+    </section>
+
+    
+    <section aria-labelledby="breakdown-title">
+      <h3 id="breakdown-title">Mode breakdown</h3>
+      <div>
+
+        <div>
+          <div>
+            <span>Basic mode</span>
+            <span>65%</span>
+          </div>
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Basic mode usage: 65%">
+            <div></div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <span>Advanced mode</span>
+            <span>35%</span>
+          </div>
+          <div role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" aria-label="Advanced mode usage: 35%">
+            <div></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section aria-labelledby="table-title">
+      <div>
+        <h3 id="table-title">Detailed breakdown</h3>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Mode</th>
+            <th scope="col">Words in</th>
+            <th scope="col">Words out</th>
+            <th scope="col">AI reduction</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>May 10, 2025</td>
+            <td><span>Basic</span></td>
+            <td>312</td>
+            <td>298</td>
+            <td>−67%</td>
+          </tr>
+          <tr>
+            <td>May 10, 2025</td>
+            <td><span>Advanced</span></td>
+            <td>540</td>
+            <td>501</td>
+            <td>−74%</td>
+          </tr>
+          <tr>
+            <td>May 9, 2025</td>
+            <td><span>Basic</span></td>
+            <td>210</td>
+            <td>205</td>
+            <td>−52%</td>
+          </tr>
+          <tr>
+            <td>May 8, 2025</td>
+            <td><span>Advanced</span></td>
+            <td>890</td>
+            <td>831</td>
+            <td>−71%</td>
+          </tr>
+          <tr>
+            <td>May 7, 2025</td>
+            <td><span>Basic</span></td>
+            <td>145</td>
+            <td>140</td>
+            <td>−48%</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="app.js?v=2" defer></script>
+</body>
+</html>

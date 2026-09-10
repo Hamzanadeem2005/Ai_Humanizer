@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - HumanizeAI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Application navigation">
+      <a href="dashboard.html">
+        <span aria-hidden="true">H</span>
+        HumanizeAI
+      </a>
+      <ul role="list">
+        <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+      <div>
+        <div role="img" aria-label="User avatar">HJ</div>
+      </div>
+    </nav>
+  </header>
+
+ 
+  <main>
+
+  
+    <div>
+      <h2>Humanize your text</h2>
+      <p>Paste AI-generated text and we'll make it sound human.</p>
+    </div>
+
+ 
+    <div>
+      <div role="group" aria-label="Humanization mode">
+        <button type="button" data-mode="basic" aria-pressed="true">Basic</button>
+        <button type="button" data-mode="advanced" aria-pressed="false">Advanced</button>
+        <button type="button" data-mode="detect" aria-pressed="false">AI Detector</button>
+      </div>
+    </div>
+
+   
+    <div>
+
+     
+      <section aria-labelledby="input-panel-title">
+        <div>
+          <span id="input-panel-title">Input</span>
+          <span id="char-count" aria-live="polite" aria-label="Character count">0 / 5000</span>
+        </div>
+        <label for="input-text">Paste your AI-generated text here</label>
+        <textarea
+          id="input-text"
+          name="input_text"
+          placeholder="Paste your AI-generated text here…"
+          maxlength="5000"
+          aria-describedby="input-panel-title"
+        ></textarea>
+      </section>
+
+     
+      <section aria-labelledby="output-panel-title">
+        <div>
+          <span id="output-panel-title">Output</span>
+          <div>
+            <button type="button" id="copy-btn">Copy</button>
+            <button type="button" id="save-btn">Save</button>
+          </div>
+        </div>
+        <div id="output-text" aria-live="polite" aria-label="Humanized output text">
+          <span>Humanized text will appear here…</span>
+        </div>
+      </section>
+
+    </div>
+
+  
+    <div role="toolbar" aria-label="Humanization options">
+      <div>
+        <div>
+          <label for="tone-select">Tone</label>
+          <select id="tone-select" name="tone">
+            <option value="casual">Casual</option>
+            <option value="formal">Formal</option>
+            <option value="academic">Academic</option>
+            <option value="professional">Professional</option>
+          </select>
+        </div>
+        <div>
+          <label for="length-select">Length</label>
+          <select id="length-select" name="length">
+            <option value="same">Same</option>
+            <option value="shorter">Shorter</option>
+            <option value="longer">Longer</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <button type="button" id="clear-btn">Clear</button>
+        <button type="button" id="humanize-btn">
+          Humanize <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+
+    <div role="region" aria-label="Today's statistics">
+      <div>
+
+        <div>
+          <div>Today's runs</div>
+          <div>7</div>
+        </div>
+
+        <div>
+          <div>Words humanized</div>
+          <div>2,341</div>
+        </div>
+
+        <div>
+          <div>AI score reduction</div>
+          <div>−67%</div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="app.js?v=2" defer></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History - HumanizeAI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+ 
+  <header>
+    <nav aria-label="Application navigation">
+      <a href="dashboard.html">
+        <span aria-hidden="true">H</span>
+        HumanizeAI
+      </a>
+      <ul role="list">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="history.html" aria-current="page">History</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+      <div>
+        <div role="img" aria-label="User avatar">HJ</div>
+      </div>
+    </nav>
+  </header>
+
+ 
+  <main>
+
+ 
+    <div>
+      <h2>History</h2>
+      <p>All your past humanization jobs - linked to your account.</p>
+    </div>
+
+
+    <div role="search" aria-label="Filter history">
+
+      <div>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
+        <label for="history-search">Search history</label>
+        <input
+          type="search"
+          id="history-search"
+          name="search"
+          placeholder="Search your history…"
+        />
+      </div>
+
+      <div>
+        <label for="mode-filter">Mode</label>
+        <select id="mode-filter" name="mode_filter">
+          <option value="all">All modes</option>
+          <option value="basic">Basic</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+
+    </div>
+
+    
+    <section aria-labelledby="history-list-label">
+      <h3 id="history-list-label">History entries</h3>
+
+      <div role="list">
+
+      
+        <article role="listitem">
+          <div>
+            <time datetime="2025-05-10">May 10, 2025</time>
+            <span>Basic</span>
+          </div>
+          <div>
+            <p>Using AI in schools today is genuinely changing how students learn…</p>
+            <p>The implementation of artificial intelligence in modern educational frameworks…</p>
+          </div>
+          <div>
+            <button type="button">View</button>
+            <button type="button">Delete</button>
+          </div>
+        </article>
+
+   
+        <article role="listitem">
+          <div>
+            <time datetime="2025-05-09">May 9, 2025</time>
+            <span>Advanced</span>
+          </div>
+          <div>
+            <p>Climate change is hitting communities in ways scientists didn't fully predict…</p>
+            <p>The ramifications of anthropogenic climate change are increasingly evident…</p>
+          </div>
+          <div>
+            <button type="button">View</button>
+            <button type="button">Delete</button>
+          </div>
+        </article>
+
+        <article role="listitem">
+          <div>
+            <time datetime="2025-05-08">May 8, 2025</time>
+            <span>Basic</span>
+          </div>
+          <div>
+            <p>Social media has changed how young people talk to each other in big ways…</p>
+            <p>The proliferation of social media platforms has fundamentally transformed…</p>
+          </div>
+          <div>
+            <button type="button">View</button>
+            <button type="button">Delete</button>
+          </div>
+        </article>
+
+      
+        <article role="listitem">
+          <div>
+            <time datetime="2025-05-07">May 7, 2025</time>
+            <span>Advanced</span>
+          </div>
+          <div>
+            <p>Remote work has genuinely blurred the line between home life and the office…</p>
+            <p>The phenomenon of remote work has precipitated a paradigm shift in…</p>
+          </div>
+          <div>
+            <button type="button">View</button>
+            <button type="button">Delete</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js?v=2" defer></script>
+</body>
+</html>

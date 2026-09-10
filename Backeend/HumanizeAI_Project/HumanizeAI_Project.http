@@ -1,0 +1,5 @@
+@HumanizeAI_Project_HostAddress = http://localhost:5036
+
+GET {{HumanizeAI_Project_HostAddress}}/weatherforecast/
+Accept: application/json
+

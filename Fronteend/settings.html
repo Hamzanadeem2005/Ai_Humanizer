@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings - HumanizeAI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  
+  <header>
+    <nav aria-label="Application navigation">
+      <a href="dashboard.html">
+        <span aria-hidden="true">H</span>
+        HumanizeAI
+      </a>
+      <ul role="list">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a href="settings.html" aria-current="page">Settings</a></li>
+      </ul>
+      <div>
+        <div role="img" aria-label="User avatar">HJ</div>
+      </div>
+    </nav>
+  </header>
+
+  
+  <main>
+
+    
+    <div>
+      <h2>Settings</h2>
+    </div>
+
+    <div>
+
+     
+      <section aria-labelledby="profile-heading">
+        <div>
+          <h3 id="profile-heading">Profile</h3>
+          <p>Update your name and email address.</p>
+        </div>
+        <div>
+          <form action="#" method="POST" novalidate>
+
+            <div>
+              <div>
+                <label for="profile-name">Full name</label>
+                <input
+                  type="text"
+                  id="profile-name"
+                  name="name"
+                  value="Muhammad Hamza Nadeem"
+                  autocomplete="name"
+                />
+              </div>
+              <div>
+                <label for="profile-email">Email address</label>
+                <input
+                  type="email"
+                  id="profile-email"
+                  name="email"
+                  value="muhammadhamzanadeem270@gmail.com"
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <button type="submit">Save profile</button>
+
+          </form>
+        </div>
+      </section>
+
+      
+      <section aria-labelledby="prefs-heading">
+        <div>
+          <h3 id="prefs-heading">Preferences</h3>
+          <p>Customize your default humanization settings.</p>
+        </div>
+        <div>
+          <form action="#" method="POST" novalidate>
+
+            <div>
+              <div>
+                <span>Default mode</span>
+                <span>The mode pre-selected when you open the dashboard.</span>
+              </div>
+              <div>
+                <label for="default-mode">Default mode</label>
+                <select id="default-mode" name="default_mode">
+                  <option value="basic" selected>Basic</option>
+                  <option value="advanced">Advanced</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit">Save preferences</button>
+
+          </form>
+        </div>
+      </section>
+
+
+      
+      <section aria-labelledby="danger-heading">
+        <div>
+          <h3 id="danger-heading">Session</h3>
+        </div>
+        <div>
+          <p>Sign out of your HumanizeAI account on this device.</p>
+          <button type="button">Log out</button>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="app.js?v=2" defer></script>
+</body>
+</html>

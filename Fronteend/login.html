@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - HumanizeAI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+  <a href="landing.html">
+    <span aria-hidden="true">H</span>
+    HumanizeAI
+  </a>
+
+  <div role="main">
+
+
+    <nav aria-label="Authentication options">
+      <a href="login.html" aria-current="page">Login</a>
+      <a href="signup.html">Sign up</a>
+    </nav>
+
+
+    <div>
+      <h1>Welcome back</h1>
+      <p>Sign in to your HumanizeAI account.</p>
+
+      <form action="#" method="POST" novalidate>
+
+        <div>
+          <label for="login-email">Email address</label>
+          <input
+            type="email"
+            id="login-email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+          />
+        </div>
+
+        <a href="#">Forgot password?</a>
+
+        <button type="submit">
+          Sign in
+        </button>
+
+      </form>
+
+      <p>
+        Don't have an account? <a href="signup.html">Sign up free</a>
+      </p>
+    </div>
+
+  </div>
+
+  <script src="app.js?v=2" defer></script>
+</body>
+</html>
