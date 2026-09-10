@@ -1,9 +1,6 @@
--- HumanizeAI database setup 
-
-
-CREATE DATABASE IF NOT EXISTS humanizeai_db
-  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE humanizeai_db;
+-- HumanizeAI database setup
+-- Note: CREATE DATABASE removed for hosted environments (freesqldatabase, Aiven, etc.)
+-- The database is already created by the hosting provider.
 
 
 
@@ -79,9 +76,8 @@ CREATE TABLE IF NOT EXISTS humanizationdictionary (
 ) ENGINE=InnoDB;
 
 -- fill in the four tones (won't duplicate if they already exist)
-INSERT INTO toneprofiles (ToneID, ToneName) VALUES
-  (1, 'Casual'), (2, 'Formal'), (3, 'Academic'), (4, 'Professional')
-  AS new ON DUPLICATE KEY UPDATE ToneName = new.ToneName;
+INSERT IGNORE INTO toneprofiles (ToneID, ToneName) VALUES
+  (1, 'Casual'), (2, 'Formal'), (3, 'Academic'), (4, 'Professional');
 
 
 -- ============================================================
@@ -114,31 +110,5 @@ CREATE TABLE IF NOT EXISTS historyaudit (
 ) ENGINE=InnoDB;
 
 
--- STORED PROCEDURE
-
-
-DROP PROCEDURE IF EXISTS sp_get_user_stats;
-DELIMITER $$
-CREATE PROCEDURE sp_get_user_stats(IN p_user_id INT)
-BEGIN
-    SELECT COUNT(*)                              AS Runs,
-           COALESCE(AVG(HumanScore), 0)          AS AvgHumanScore,
-           COALESCE(AVG(HumanScore - AIScore), 0) AS AvgReduction
-    FROM transformationhistory
-    WHERE UserID = p_user_id;
-END$$
-DELIMITER ;
-
-
--- TRIGGER
-
-DROP TRIGGER IF EXISTS trg_history_after_insert;
-DELIMITER $$
-CREATE TRIGGER trg_history_after_insert
-AFTER INSERT ON transformationhistory
-FOR EACH ROW
-BEGIN
-    INSERT INTO historyaudit (HistoryID, UserID, Action, LoggedAt)
-    VALUES (NEW.HistoryID, NEW.UserID, 'INSERT', NOW());
-END$$
-DELIMITER ;
+-- STORED PROCEDURE and TRIGGER omitted for hosted MySQL compatibility.
+-- The application does not require them to function.
