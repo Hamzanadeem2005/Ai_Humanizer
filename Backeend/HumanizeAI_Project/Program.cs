@@ -29,4 +29,4 @@ Console.WriteLine("Running at http://localhost:5000");
 Console.WriteLine("Test endpoint: http://localhost:5000/api/humanize/test");
 Console.WriteLine("");
 
-app.Run("http://localhost:5000");
+app.Run("http://0.0.0.0:" + (Environment.GetEnvironmentVariable("PORT") ?? "5000"));
