@@ -1,6 +1,6 @@
 const API_BASE = window.location.hostname === "localhost"
   ? "http://localhost:5000"
-  : "https://ai-humanizer-api.onrender.com";
+  : "https://ai-humanizer-0hs5.onrender.com";
 
 const TONE_IDS = { casual: 1, formal: 2, academic: 3, professional: 4 };
 
